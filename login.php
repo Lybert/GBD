@@ -20,7 +20,7 @@
                  
          // 4º. Establecemos un "echo" para que se nos muestre la consulta
          
-         echo $sql, "<br>";
+         // echo $sql, "<br>";
          
          // 5º. Creamos unas "Secuencias preparadas" para recoger los datos
          // obtenidos en la consulta. 
