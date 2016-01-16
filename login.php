@@ -9,7 +9,7 @@
         
          $conexion = new mysqli("localhost", "ausias", "ausias", "examen_web");
          if ($conexion->connect_errno) {
-            die("Fallo al contenctar a MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error);
+            die("Fallo al conectar a MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error);
          }
          
          // 3º. Preparamos la consulta que queremos ejecutar
@@ -38,7 +38,8 @@
          // que nos hemos conectado correctamente
          
          if($rows==1){
-             echo "Bienvenido $usuario";
+             echo "Bienvenido $usuario" ,"<br>";
+             echo "<a href='./cuestionario'>Acceder al examen</a>";
          } else {
              echo "Login Incorrecto";
          }
