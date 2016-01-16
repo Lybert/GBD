@@ -39,7 +39,7 @@
          
          if($rows==1){
              echo "Bienvenido $usuario" ,"<br>";
-             echo "<a href='./cuestionario'>Acceder al examen</a>";
+             echo "<a href='./cuestionario.php'>Acceder al examen</a>";
          } else {
              echo "Login Incorrecto";
          }
