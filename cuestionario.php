@@ -45,7 +45,7 @@ and open the template in the editor.
                     <input type="radio" name="simpsons" value="ralph"> La respuesta es el FANTÁSTICO Ralph<br>
             </fieldset>
             <fieldset>
-                <legend>Pregunta Nº.5</legend>
+                <legend>Pregunta Nº.5</legend> <br>
                 ¿Qué jugador de waterpolo debe llevar el gorro número 1 a la hora de jugar un partido? <br>
                     <input type="radio" name="water" value="captain"> El capitán<br>
                     <input type="radio" name="water" value="boya"> El boya<br>
