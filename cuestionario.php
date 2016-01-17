@@ -10,7 +10,17 @@ and open the template in the editor.
         <title>EXAMEN</title>
     </head>
     <body>
-        <h1>Hola</h1>
+        <h1>Examen</h1>
+        <form action="cuestionario.php" method="post">
+            <fieldset>
+                <legend>Pregunta Nº.1</legend> <br>
+                La Alquimia se compone de cuatro elementos básicos: Tierra, Agua, Aire y ... <br>
+                <input type="radio" name="elemento" value="Éter"> <br>
+                <input type="radio" name="elemento" value="Fuego"> <br>
+                <input type="radio" name="elemento" value="Hielo"> <br>
+                <input type="radio" name="elemento" value="Luz"> <br>
+            </fieldset>
+        </form>
         <?php
         
         ?>

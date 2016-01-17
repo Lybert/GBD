@@ -11,8 +11,8 @@ and open the template in the editor.
     </head>
     <body>
         <form action="login.php" method="post">
-            Usuario: <input type="text" name="usuario"><br>
-            Password: <input type="password" name="password"><br>
+            Usuario: <input type="text" name="usuario"> <br>
+            Password: <input type="password" name="password"> <br>
             Acceder <input type="submit">
         </form>
     </body>
