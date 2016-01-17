@@ -15,10 +15,10 @@ and open the template in the editor.
             <fieldset>
                 <legend>Pregunta Nº.1</legend> <br>
                 La Alquimia se compone de cuatro elementos básicos: Tierra, Agua, Aire y ... <br>
-                <input type="radio" name="elemento" value="Éter"> <br>
-                <input type="radio" name="elemento" value="Fuego"> <br>
-                <input type="radio" name="elemento" value="Hielo"> <br>
-                <input type="radio" name="elemento" value="Luz"> <br>
+                <input type="radio" name="elemento" value="Éter"> Eter<br>
+                <input type="radio" name="elemento" value="Fuego"> Fuego<br>
+                <input type="radio" name="elemento" value="Hielo"> Hielo<br>
+                <input type="radio" name="elemento" value="Luz"> Luz<br>
             </fieldset>
         </form>
         <?php
