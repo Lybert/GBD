@@ -13,7 +13,7 @@ and open the template in the editor.
         <form action="login.php" method="post">
             Usuario: <input type="text" name="usuario"> <br>
             Password: <input type="password" name="password"> <br>
-            Acceder <input type="submit">
+            <input type="submit" value="Acceder">
         </form>
     </body>
 </html>
