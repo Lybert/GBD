@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <h1>Examen</h1>
-        <form action="cuestionario.php" method="post">
+        <form action="calificador.php" method="post">
             <div>
                 <fieldset>
                     <legend>Pregunta Nº.1</legend> <br>
