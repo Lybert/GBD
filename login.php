@@ -2,8 +2,8 @@
         
         // 1º. Obtenemos los valores pasados a $usuario y $password
         
-        $usuario = $_POST['usuario'];
-        $password = $_POST['password'];
+        $usuario = $_REQUEST['usuario'];
+        $password = $_REQUEST['password'];
         
         // 2º. Creamos la variable para conectarnos a la Base de Datos
         
@@ -11,6 +11,11 @@
          if ($conexion->connect_errno) {
             die("Fallo al conectar a MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error);
          }
+         
+         // Añadimos la protección frente a Inyección SQL.
+         
+         $usuario = $conexion->real_escape_string($usuario);
+         $password = $conexion->real_escape_string($password);
          
          // 3º. Preparamos la consulta que queremos ejecutar
          
