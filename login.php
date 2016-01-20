@@ -53,7 +53,7 @@
          // y cerramos la conexion
          
          $result->free();
-         $conecion->close();
+         $conexion->close();
          
         ?>
 
