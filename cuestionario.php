@@ -56,28 +56,5 @@ and open the template in the editor.
                 <input type="submit" value="Enviar">
             </div>
         </form>
-        <?php
-        // 1º. Lo primero es obtener los datos pasados en los campos anteriores
-        // y almacenarlos en las variables correspondientes.
-
-        $elemento = $_POST['a'];
-        $reliquia = $_POST['b'];
-        $pj = $_POST['c'];
-        $simpsons = $_POST['d'];
-        $water = $_POST['e'];
-
-        // 2º. Realizar la conexión con la Base de Datos.
-
-        $conexion = new mysqli("localhost", "ausias", "ausias", "examen_web");
-        if ($conexion->connect_errno) {
-            die("Fallo al conectar a MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error);
-        }
-        
-        // 3º. Preparamos la consulta SQL.
-        
-        $comprobar = "SELECT * "
-                ."FROM respuestas "
-                . "WHERE idRespuesta=?"
-        ?>
     </body>
 </html>
