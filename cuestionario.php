@@ -13,7 +13,7 @@ $result_cons = $conexion->query($sql);
 
 // 2º. Creamos el formulario con las preguntas y respuestas correspondientes.
 
-echo '<form action="cuestionario.php" method="post">';
+echo '<form action="puntuador.php" method="post">';
 
 // Mostramos la información, oculta para el alumno, que después recogeremos en
 // "puntuador.php".
