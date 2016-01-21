@@ -48,12 +48,6 @@
          } else {
              echo "Login Incorrecto";
          }
-         
-         // 7º. Para liberar la memoria consumida, liberamos el objeto "$result$
-         // y cerramos la conexion
-         
-         $result->free();
-         $conexion->close();
-         
+
         ?>
 
