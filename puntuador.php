@@ -1,5 +1,19 @@
 <?php
 
+// Conectarnos con la Base de Datos.
+// Añadir también el archivo "functions.php" e iniciamos la sesión.
+
+include "conexion.php";
+include_once "inc/functions.php";
+
+sec_session_start();
+
+// Realizamos, de nuevo, la verificación de intentos.
+
+if (checkattempts($_SESSION['usuario'], $conexion)) {
+    echo "Has realizado 3 veces el examen. Suerte en la calificación final C:", "<br>";
+} else {
+
 // Establecemos la recogida de datos provenientes de "cuestionario.php".
 
 $c1 = $_POST['1'];
@@ -75,9 +89,15 @@ $calificacion = round((($aciertos - ($errores/3))*2),2);
 // Se lo mostramos por pantalla al alumno.
 
 echo "<br>", "Has tenido $aciertos aciertos, $vacio preguntas sin responder y has cometido $errores fallos";
-echo "<br>", "Tu nota final es $calificacion";
+echo "<br>", "Tu nota final es $calificacion", "<br>";
 
-// AHora, guardamos la nota en la Base de Datos.
+// Comprobamos el número de intentos que el usuario ha realizado.
+
+    if (checkattempts($usuario, $conexion)) {
+	echo "Este era tu último intento.";
+    } 
+    
+// Por último, guardamos la nota en la Base de Datos.
 
 $sql = "INSERT INTO notas "
         . "(usuario, vacio, aciertos, errores, nota) "
@@ -86,4 +106,5 @@ $sql = "INSERT INTO notas "
 
 $conexion->query($sql);
 
+}
 ?>

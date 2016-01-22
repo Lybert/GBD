@@ -1,9 +1,20 @@
 <?php
 
 // Conectarnos con "config.php".
+// Añadimos también el archivo "functions.php" e iniciamos la sesion.
 
 include "conexion.php";
+include_once "inc/functions.php";
 
+sec_session_start();
+
+// Creamos una condición "if" parar verificar que si el usuario ya ha realizado
+// más de 3 intentos, muestre un mensaje. Si no, muestra el formulario.
+
+if (checkattempts($_SESSION['usuario'], $conexion)) {
+    echo "Has realizado 3 veces el examen. Suerte en la calificación final C:", "<br>";
+} else {
+    
 // 1º. Preparamos la consulta SQL y guardamos el resultado en "$result".
 
 $sql = "SELECT * "
@@ -46,5 +57,5 @@ echo "<input type=\"hidden\" name=\"usuario\" value=\"$usuario\">";
 
     echo "<input type='submit' name='submit' value='Calificar'>";
     echo "</form>";
-    
+}
     ?>
