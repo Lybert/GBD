@@ -2,8 +2,8 @@
         
         // 1º. Obtenemos los valores pasados a $usuario y $password
         
-        $usuario = $_REQUEST['usuario'];
-        $password = $_REQUEST['password'];
+        $usuario = $_POST['usuario'];
+        $password = $_POST['password'];
         
         // 2º. Creamos la variable para conectarnos a la Base de Datos
         

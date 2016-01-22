@@ -18,7 +18,7 @@ echo '<form action="puntuador.php" method="post">';
 // Mostramos la información, oculta para el alumno, que después recogeremos en
 // "puntuador.php".
  
-echo "<input type='hidden' name='usuario' value='$id'>";
+echo "<input type=\"hidden\" name=\"usuario\" value=\"$usuario\">";
 
 // 3º. Establecemos un bucle "while" para que mientras se devuelva una fila,
 // se muestren los datos de la misma, devueltos por la consulta.
@@ -41,7 +41,7 @@ echo "<input type='hidden' name='usuario' value='$id'>";
         echo "<input type='radio' name='$idP' value='2'> $op2 <br>";
         echo "<input type='radio' name='$idP' value='3'> $op3 <br>";
         echo "<input type='radio' name='$idP' value='4'> $op4 <br>";
-        echo "</fieldset>";
+        echo "</fieldset>", "<br>";
     }
 
     echo "<input type='submit' name='submit' value='Calificar'>";
