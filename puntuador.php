@@ -40,11 +40,11 @@ echo $c1," - ",$c2," - ",$c3," - ",$c4," - ",$c5;
 $sql = "INSERT INTO respuestas "
         . "(usuario, idPregunta, idOpcion) "
         . "VALUES "
-        . "($usuario, 1, $c1), "
-        . "($usuario, 2, $c2), "
-        . "($usuario, 3, $c3), "
-        . "($usuario, 4, $c4), "
-        . "($usuario, 5, $c5); ";
+        . "('$usuario', 1, $c1), "
+        . "('$usuario', 2, $c2), "
+        . "('$usuario', 3, $c3), "
+        . "('$usuario', 4, $c4), "
+        . "('$usuario', 5, $c5); ";
 
 // Añadimos la conexión proveniente de "conexion.php".
 
