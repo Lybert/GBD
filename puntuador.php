@@ -105,4 +105,6 @@ $sql = "INSERT INTO notas "
 $conexion->query($sql);
 
 }
+
+$conexion->close();
 ?>
