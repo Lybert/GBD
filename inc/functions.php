@@ -43,7 +43,7 @@ function checkattempts($usuario, $conexion) {
     if ($stmt = $conexion->prepare("SELECT idRespuesta
     FROM respuestas
     WHERE usuario = ?")) {
-	$stmt->bind_param('s', $usuario);
+	$stmt->bind_param('s', '$usuario');
 	$stmt->execute();
 	$stmt->store_result();
         
