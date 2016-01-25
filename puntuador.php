@@ -48,8 +48,6 @@ $sql = "INSERT INTO respuestas "
 
 // Añadimos la conexión proveniente de "conexion.php".
 
-include "conexion.php";
-
 $conexion->query($sql);
 
 // Ahora realizamos la consulta que comparará los resultados obtenidos
@@ -57,7 +55,7 @@ $conexion->query($sql);
 
 $sql = "SELECT p.correcta as a, r.idOpcion as b "
         . "FROM preguntas p, respuestas r "
-        . "WHERE r.usuario=$usuario AND p.idPregunta=r.idPregunta";
+        . "WHERE r.usuario='$usuario' AND p.idPregunta=r.idPregunta";
 
 // Guardamos los datos obtenidos de la consulta.
 // Establecemos las variables para determinar la puntuación obtenida
