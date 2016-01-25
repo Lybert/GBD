@@ -103,6 +103,7 @@ $sql = "INSERT INTO notas "
         . "('$usuario','$vacio','$aciertos','$errores','$calificacion');";
 
 $conexion->query($sql);
+$calificacion->free;
 
 }
 
