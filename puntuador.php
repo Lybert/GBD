@@ -16,12 +16,12 @@ if (checkattempts($_SESSION['usuario'], $conexion)) {
 
 // Establecemos la recogida de datos provenientes de "cuestionario.php".
 
-$c1 = $_POST['1'];
-$c2 = $_POST['2'];
-$c3 = $_POST['3'];
-$c4 = $_POST['4'];
-$c5 = $_POST['5'];
-$usuario = $_POST['usuario'];
+$c1 = $_REQUEST['1'];
+$c2 = $_REQUEST['2'];
+$c3 = $_REQUEST['3'];
+$c4 = $_REQUEST['4'];
+$c5 = $_REQUEST['5'];
+$usuario = $_REQUEST['usuario'];
 
 // Si no se responde la pregunta, entonces le especificamos que devuelva "0".
 
