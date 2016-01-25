@@ -33,7 +33,7 @@ if($c5 == NULL) $c5=0;
 
 // Entorno de pruebas.
 
-echo $c1," - ",$c2," - ",$c3," - ",$c4," - ",$c5;
+// echo $c1," - ",$c2," - ",$c3," - ",$c4," - ",$c5;
 
 // Guardamos las respuestas en su tabla correspondiente: "respuestas".
 
