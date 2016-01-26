@@ -78,7 +78,7 @@ while($fila = $result_cons->fetch_assoc()) {
     } else {
         $errores++;
     }
-    echo $fila['a'], " ==> ", $fila['b'], "<br>";
+    // Entorno de pruebas: echo $fila['a'], " ==> ", $fila['b'], "<br>";
 }
 
 // Una vez obtenido la cantidad de: aciertos, errores y preguntas vacías
@@ -108,6 +108,7 @@ $conexion->query($sql);
 $calificacion->free;
 
 }
-
+// Puede que las notas se sumen porque el usuario no cierra la sesion.
+// Hay que comprobarlo con un logout.php
 $conexion->close();
 ?>
