@@ -1,5 +1,9 @@
 <?php
         
+        // Añadimos el archivo de sesiones, "functions.php"
+
+        include_once "inc/functions.php";
+        
         // 1º. Obtenemos los valores pasados a $usuario y $password
         
         $usuario = $_POST['usuario'];
@@ -44,6 +48,15 @@
          
          if($rows==1){
              echo "Bienvenido $usuario" ,"<br>";
+             
+             sec_session_start();
+             
+             // Aquí damos de alta al usuario durante la sesión que va a ocupar
+             // durante el examen. Esta variable la podremos recoger a lo
+             // largo de toda la aplicación.
+             
+             $_SESSION['usuario'] = $usuario;
+             
              echo "<a href='./cuestionario.php'>Acceder al examen</a>";
          } else {
              echo "Login Incorrecto";

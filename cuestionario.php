@@ -9,7 +9,7 @@ include_once "inc/functions.php";
 sec_session_start();
 
 // Creamos una condición "if" parar verificar que si el usuario ya ha realizado
-// más de 3 intentos, muestre un mensaje. Si no, muestra el formulario.
+// más de 3 intentos, muestre un mensaje. Si no, muestra el form ulario.
 
 if (checkattempts($_SESSION['usuario'], $conexion)) {
     echo "Has realizado 3 veces el examen. Suerte en la calificación final C:", "<br>";
@@ -29,7 +29,8 @@ echo '<form action="puntuador.php" method="post">';
 // Mostramos la información, oculta para el alumno, que después recogeremos en
 // "puntuador.php".
  
-echo "<input type=\"hidden\" name=\"usuario\" value=\"$usuario\">";
+// Entorno de pruebas:
+// echo "<input type=\"hidden\" name=\"usuario\" value=\"$usuario\">";
 
 // 3º. Establecemos un bucle "while" para que mientras se devuelva una fila,
 // se muestren los datos de la misma, devueltos por la consulta.

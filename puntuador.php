@@ -21,7 +21,7 @@ $c2 = $_REQUEST['2'];
 $c3 = $_REQUEST['3'];
 $c4 = $_REQUEST['4'];
 $c5 = $_REQUEST['5'];
-$usuario = $_REQUEST['usuario'];
+$usuario = $_SESSION['usuario'];
 
 // Si no se responde la pregunta, entonces le especificamos que devuelva "0".
 
@@ -47,6 +47,8 @@ $sql = "INSERT INTO respuestas "
         . "('$usuario', 5, $c5); ";
 
 // Añadimos la conexión proveniente de "conexion.php".
+
+// Entorno de pruebas: echo "jjjj ".$sql. " jjjj";
 
 $conexion->query($sql);
 
